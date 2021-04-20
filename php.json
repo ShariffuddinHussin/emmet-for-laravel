@@ -1,15 +1,110 @@
 {
-	// Place your snippets for bat here. Each snippet is defined under a snippet name and has a prefix, body and 
-	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
-	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
-	// same ids are connected.
-	// Example:
-	// "Print to console": {
-	// 	"prefix": "log",
-	// 	"body": [
-	// 		"console.log('$1');",
-	// 		"$2"
-	// 	],
-	// 	"description": "Log output to console"
-	// }
+	// migrateton table
+	"Print string table": {
+		"prefix": "table-string",
+		"body": [
+			"$$table->string('');"
+		],
+		"description": "The string method creates a VARCHAR equivalent column of the given length",
+	},
+	"Print integer table": {
+		"prefix": "table-integer",
+		"body": [
+			"$$table->integer('');"
+		],
+		"description": "The integer method creates an INTEGER equivalent column:",
+	},
+	"Print double table": {
+		"prefix": "table-double",
+		"body": [
+			"$$table->double('',10,2);"
+		],
+		"description": "The double method creates a DOUBLE equivalent column with the given precision (total digits) and scale (decimal digits)::",
+	},
+	"Print float table": {
+		"prefix": "table-float",
+		"body": [
+			"$$table->float('',1,2);"
+		],
+		"description": "The float method creates an float equivalent column:",
+	},
+	"Print json table": {
+		"prefix": "table-json",
+		"body": [
+			"$$table->json('');"
+		],
+		"description": "The json method creates an json equivalent column:",
+	},
+	"Print longText table": {
+		"prefix": "table-longText",
+		"body": [
+			"$$table->longText('');"
+		],
+		"description": "The longText method creates an longText equivalent column:",
+	},
+	"Print decimal  table": {
+		"prefix": "table-decimal",
+		"body": [
+			"$$table->decimal('',,);"
+		],
+		"description": "The decimal method creates a DECIMAL equivalent column with the given precision (total digits) and scale (decimal digits):",
+	},
+	// fillable
+	"Print fillable": {
+		"prefix": "fillable",
+		"body": [
+			"protected $fillable =[];"
+		],
+		"description": "an array containing all those fields of table which can be filled using mass-assignment",
+	},
+	// CRUD route
+	"Print index route": {
+		"prefix": "index",
+		"body": [
+			"Route::get ('/uri',[App\\Http\\Controllers\\ControllernameContoller::class, 'index'])->name('index');"
+		],
+		"description": "create an index route",
+	},
+	"Print store route": {
+		"prefix": "store",
+		"body": [
+			"Route::post ('/uri',[App\\Http\\Controllers\\ControllernameContoller::class, 'store'])->name('store');"
+		],
+		"description": "create a store route",
+	},
+	"Print create route": {
+		"prefix": "create",
+		"body": [
+			"Route::post ('/uri/create',[App\\Http\\Controllers\\ControllernameContoller::class, 'create'])->name('create');"
+		],
+		"description": "create a create route",
+	},
+	"Print show route": {
+		"prefix": "show",
+		"body": [
+			"Route::get ('/uri/{uri}',[App\\Http\\Controllers\\ControllernameContoller::class, 'show'])->name('show');"
+		],
+		"description": "create a show route",
+	},
+	"Print update route": {
+		"prefix": "update",
+		"body": [
+			"Route::put ('/uri/{uri}',[App\\Http\\Controllers\\ControllernameContoller::class, 'update'])->name('update');"
+		],
+		"description": "create a update route",
+	},
+	"Print delete route": {
+		"prefix": "delete",
+		"body": [
+			"Route::delete ('/uri/{uri}',[App\\Http\\Controllers\\ControllernameContoller::class, 'delete'])->name('delete');"
+		],
+		"description": "create a delete route",
+	},
+	"Print resource route": {
+		"prefix": "delete",
+		"body": [
+			"Route::resource('product', App\\Http\\Controllers\\ControllernameContoller::class);"
+		],
+		"description": "create a resource route",
+	},
 }
